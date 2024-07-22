@@ -30,3 +30,49 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    phone = models.CharField(max_length=10)
+    date = models.DateField(max_length=10)
+    department = models.CharField(max_length=100)
+    doctor = models.CharField(max_length=100)
+    message = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+class Member(models.Model):
+    name = models.CharField(max_length=200)
+    username = models.CharField(max_length=200)
+    password = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+class ImageModel(models.Model):
+    image = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=50)
+    price = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title
+
+class Admin(models.Model):
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.username
+
+
+
+
+
+
+
+
+
+
+

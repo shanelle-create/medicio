@@ -70,9 +70,10 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="{% url 'departments' %}">Departments</a></li>
           <li><a class="nav-link scrollto" href="{% url 'doctors' %}">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Admin Section</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="{% url 'upload' %}">UPLOAD</a></li>
+              <li><a href="{% url 'image' %}">VIEW DOCTORS</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -99,6 +100,8 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+
+      <h3> Welcome {{members.username }}</h3>
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -196,7 +199,7 @@
         <div class="text-center">
           <h3>In an emergency? Need help now?</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn scrollto" href="#appointment">Make an Make an Appointment</a>
+          <a class="cta-btn scrollto" href="#appointment">Make an Appointment</a>
         </div>
 
       </div>
